@@ -1,1 +1,37 @@
+@import '@fontsource-variable/inter';
 @import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --color-page: #f8f9fa;
+  --color-icon: #244153;
+
+  --color-sidebar: #122829;
+  --color-sidebar-active: #0a5040;
+  --color-sidebar-muted: #b6bcc1;
+
+  --color-avatar: #c3eed9;
+  --color-avatar-text: #0a5040;
+
+  --animate-ring: ring 0.5s ease-in-out;
+
+  @keyframes ring {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    20% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-12deg);
+    }
+    60% {
+      transform: rotate(8deg);
+    }
+    80% {
+      transform: rotate(-4deg);
+    }
+  }
+}
