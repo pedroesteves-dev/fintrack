@@ -1,0 +1,13 @@
+{
+  "name": "fintrack",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c magenta,cyan \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "npm run start:dev --prefix backend",
+    "dev:web": "npm run dev --prefix apps/web",
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix apps/web"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
