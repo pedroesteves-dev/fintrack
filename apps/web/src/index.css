@@ -14,6 +14,51 @@
   --color-avatar: #c3eed9;
   --color-avatar-text: #0a5040;
 
+  --color-brand: #007755;
+  --color-brand-light: #19956f;
+
+  --color-income: #05c472;
+  --color-income-bg: #f5fdfa;
+  --color-expense: #fe4e61;
+  --color-expense-bg: #fef7f7;
+
+  --animate-fade-in: fade-in 0.3s ease-out;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  --animate-fade: fade 0.3s ease-out;
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  --animate-page-enter: grow-in 0.4s ease-out both;
+
+  @keyframes grow-in {
+    from {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
   --animate-ring: ring 0.5s ease-in-out;
 
   @keyframes ring {
@@ -33,5 +78,21 @@
     80% {
       transform: rotate(-4deg);
     }
+  }
+}
+
+@layer base {
+  .recharts-wrapper :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  .recharts-wrapper :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+    border-radius: 8px;
+  }
+
+  [data-tooltip-slide] .recharts-tooltip-wrapper {
+    transition: transform 250ms ease-out !important;
   }
 }
