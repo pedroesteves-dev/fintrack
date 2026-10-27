@@ -11,7 +11,6 @@ export type Notification = {
   isRead: boolean
 }
 
-// Dados de exemplo até a API de notificações existir.
 export const initialNotifications: Notification[] = [
   {
     id: 1,
